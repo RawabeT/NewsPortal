@@ -1,4 +1,4 @@
-@extends('admin.layout.index')
+@extends('dashboard')
 @section('content')
 
 @if(Session::has('success'))
@@ -6,12 +6,16 @@
     {{Session::get('success')}}
 </div>
 @endif
-<form method="POST" >
+<form method="POST" action="/articles">
     @csrf
     <h1>Create news</h1>
   <div class="form-group">
     <label for="exampleInputEmail1">Article title</label>
     <input type="text" class="form-control" name="title" placeholder="Enter article">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Article author</label>
+    <input type="text" class="form-control" name="author_name" placeholder="Enter author">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Article description</label>

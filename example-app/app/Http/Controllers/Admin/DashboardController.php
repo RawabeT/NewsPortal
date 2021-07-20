@@ -8,6 +8,10 @@ use App\Models\Article;
 
 class DashboardController extends Controller
 {
+    public function show(Article $article){
+        
+    }
+
     public function admin(){
         return view('dashboard');
     }
@@ -24,6 +28,7 @@ class DashboardController extends Controller
         $article = new Article();
         $article ->title = $request->title;
         $article ->description = $request->description;
+        $article ->author_name = $request->author_name;
         $article-> save();
         // return back()->with('article_created','Article created ^^');
         return redirect()->route('admin.operations.create')->with('success','Post created successfully.');
