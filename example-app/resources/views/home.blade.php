@@ -107,34 +107,6 @@
          </article> <!-- end article -->
          @endforeach
 
-     <article class="brick entry format-standard animate-this">
-
-        <div class="entry-thumb">
-           <a href="single-standard.html" class="thumb-link">
-               <img src="images/thumbs/ferris-wheel.jpg" alt="ferris wheel">                   
-           </a>
-        </div>
-
-        <div class="entry-text">
-            <div class="entry-header">
-
-                <div class="entry-meta">
-                    <span class="cat-links">
-                        <a href="#">Design</a> 
-                        <a href="#">UI</a>                			
-                    </span>			
-                </div>
-
-                <h1 class="entry-title"><a href="single-standard.html">This Is Another Standard Format Post.</a></h1>
-                
-            </div>
-                 <div class="entry-excerpt">
-                     Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                 </div>
-        </div>
-        
-         </article> <!-- end article -->
-
      <!-- format audio here -->
      <article class="brick entry format-audio animate-this">
 
@@ -166,75 +138,7 @@
                  </div>
         </div>
         
-         </article> <!-- /article -->
-
-      <article class="brick entry format-quote animate-this" >
-
-        <div class="entry-thumb">                  
-            <blockquote>
-                  <p>Good design is making something intelligible and memorable. Great design is making something memorable and meaningful.</p>
-
-                  <cite>Dieter Rams</cite> 
-            </blockquote>	          
-        </div>   
-
-         </article> <!-- end article -->
-
-      <article class="brick entry animate-this">
-
-        <div class="entry-thumb">
-           <a href="single-standard.html" class="thumb-link">
-               <img src="images/thumbs/shutterbug.jpg" alt="Shutterbug">                      
-           </a>
-        </div>
-
-        <div class="entry-text">
-            <div class="entry-header">
-
-                <div class="entry-meta">
-                    <span class="cat-links">
-                        <a href="#">Photography</a> 
-                        <a href="#">html</a>                				
-                    </span>			
-                </div>
-
-                <h1 class="entry-title"><a href="single-standard.html">Photography Skills Can Improve Your Graphic Design.</a></h1>
-                
-            </div>
-                 <div class="entry-excerpt">
-                     Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                 </div>
-        </div>
-        
-         </article> <!-- end article -->
-
-     <article class="brick entry animate-this" >
-
-        <div class="entry-thumb">
-           <a href="single-standard.html" class="thumb-link">
-               <img src="images/thumbs/usaf-rocket.jpg" alt="USAF rocket">                      
-           </a>
-        </div>
-
-        <div class="entry-text">
-            <div class="entry-header">
-
-                <div class="entry-meta">
-                    <span class="cat-links">
-                        <a href="#">Branding</a> 
-                        <a href="#">Mockup</a>               				
-                    </span>			
-                </div>
-
-                <h1 class="entry-title"><a href="single-standard.html">The 10 Golden Rules of Clean Simple Design.</a></h1>
-                
-            </div>
-                 <div class="entry-excerpt">
-                     Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                 </div>
-        </div>
-        
-         </article> <!-- end article -->        	
+         </article> <!-- /article -->    	
 
          <article class="brick entry format-gallery group animate-this">
 
@@ -346,65 +250,9 @@
         
          </article> <!-- end article -->
 
-         <article class="brick entry animate-this">
+  </div> 
 
-        <div class="entry-thumb">
-           <a href="single-standard.html" class="thumb-link">
-               <img src="images/thumbs/lighthouse.jpg" alt="Lighthouse">                      
-           </a>
-        </div>
-
-        <div class="entry-text">
-            <div class="entry-header">
-
-                <div class="entry-meta">
-                    <span class="cat-links">
-                        <a href="#">Photography</a> 
-                        <a href="#">Design</a>
-                    </span>			
-                </div>
-
-                <h1 class="entry-title"><a href="single-standard.html">Breathtaking Photos of Lighthouses.</a></h1>
-                
-            </div>
-                 <div class="entry-excerpt">
-                     Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                 </div>
-        </div>
-        
-         </article> <!-- end article -->
-
-         <article class="brick entry animate-this">
-
-        <div class="entry-thumb">
-           <a href="single-standard.html" class="thumb-link">
-               <img src="images/thumbs/liberty.jpg" alt="Liberty">                      
-           </a>
-        </div>
-
-        <div class="entry-text">
-            <div class="entry-header">
-
-                <div class="entry-meta">
-                    <span class="cat-links">
-                        <a href="#">Branding</a> 
-                        <a href="#">html</a>                	
-                    </span>			
-                </div>
-
-                <h1 class="entry-title"><a href="single-standard.html">Designing With Black and White.</a></h1>
-                
-            </div>
-                 <div class="entry-excerpt">
-                     Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                 </div>
-        </div>
-        
-         </article> <!-- end article -->
-
-  </div> <!-- end brick-wrapper --> 
-
-</div> <!-- end row -->
+</div> 
 
 </section> 
 @endsection
