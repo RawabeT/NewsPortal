@@ -10,39 +10,28 @@ use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        $articles = DB::select('select * from articles');
-        return view('read',['articles'=>$articles]);
+        return view('read', [
+            'articles' => DB::table('articles')-> paginate(5)
+        ]);
     }
 
     public function home()
     {
-        $articles = DB::select('select * from articles');
-        return view('home',['articles'=>$articles]);
+        return view('home', [
+            'articles' => DB::table('articles')->orderBy('date_of_publish', 'desc')
+            ->take(10)
+            ->get()
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $article = new Article();
@@ -64,36 +53,17 @@ class ArticleController extends Controller
         return view('charts', compact('articleData'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Article  $article
-     * @return \Illuminate\Http\Response
-     */
     public function show(Article $article)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Article  $article
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $articles = DB::select('select * from articles where id = ?',[$id]);
         return view('edit',['articles'=>$articles]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Article  $article
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $article = $request->input('title');
@@ -101,12 +71,6 @@ class ArticleController extends Controller
         return redirect()->route('articles');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Article  $article
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         DB::delete('delete from articles where id = ?',[$id]);
