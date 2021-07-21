@@ -14,21 +14,23 @@ use App\Http\Controllers\ArticleController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/' , [ArticleController::class, 'home']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/chart', [ArticleController::class, 'handleChart']);
-Route::resource('articles', ArticleController::class)->middleware('auth');
+Route::resource('articles', ArticleController::class);
 
 require __DIR__.'/auth.php';
 
 Route::get('/articles' , [ArticleController::class, 'index'])->name('articles');
 Route::get('/articles/create' , [ArticleController::class, 'create'])->name('articles.create');
+Route::get('/articles/edit/{id}' , [ArticleController::class, 'edit']);
+Route::post('/articles/edit/{id}' , [ArticleController::class, 'update']);
+Route::get('/articles/delete/{id}' , [ArticleController::class, 'destroy']);
 
 
 // Route::resources([

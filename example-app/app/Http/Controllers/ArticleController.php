@@ -21,6 +21,12 @@ class ArticleController extends Controller
         return view('read',['articles'=>$articles]);
     }
 
+    public function home()
+    {
+        $articles = DB::select('select * from articles');
+        return view('home',['articles'=>$articles]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -75,9 +81,10 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article)
+    public function edit($id)
     {
-        //
+        $articles = DB::select('select * from articles where id = ?',[$id]);
+        return view('edit',['articles'=>$articles]);
     }
 
     /**
@@ -87,9 +94,11 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, $id)
     {
-        //
+        $article = $request->input('title');
+        DB::update('update articles set title = ? where id = ?',[$article,$id]);
+        return redirect()->route('articles');
     }
 
     /**
@@ -98,8 +107,9 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy($id)
     {
-        //
+        DB::delete('delete from articles where id = ?',[$id]);
+        return redirect()->route('articles');
     }
 }

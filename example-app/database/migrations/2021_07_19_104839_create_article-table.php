@@ -15,8 +15,8 @@ class CreateArticleTable extends Migration
     {
         schema::create('articles', function(Blueprint $table){
             $table->id();
-            $table->string('author_name');
-            $table->timestamp('date_of_publish');
+            $table->string('author_name')->nullable();
+            $table->timestamp('date_of_publish')->nullable();
             $table->string('title')->nullable();
             $table->longText('description')->nullable();
         });

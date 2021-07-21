@@ -77,6 +77,7 @@
           </div> <!-- end entry content -->         		
       </div>
 
+      @foreach($articles as $article)
       <article class="brick entry format-standard animate-this">
 
         <div class="entry-thumb">
@@ -95,15 +96,16 @@
                     </span>			
                 </div>
 
-                <h1 class="entry-title"><a href="single-standard.html">Just a Standard Format Post.</a></h1>
+                <h1 class="entry-title"><a href="single-standard.html">{{$article->title}}</a></h1>
                 
             </div>
                  <div class="entry-excerpt">
-                     Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                 {{$article->description}}
                  </div>
         </div>
 
          </article> <!-- end article -->
+         @endforeach
 
      <article class="brick entry format-standard animate-this">
 
@@ -403,24 +405,6 @@
   </div> <!-- end brick-wrapper --> 
 
 </div> <!-- end row -->
-
-<div class="row">
-    
-    <nav class="pagination">
-       <span class="page-numbers prev inactive">Prev</span>
-        <span class="page-numbers current">1</span>
-        <a href="#" class="page-numbers">2</a>
-       <a href="#" class="page-numbers">3</a>
-       <a href="#" class="page-numbers">4</a>
-       <a href="#" class="page-numbers">5</a>
-       <a href="#" class="page-numbers">6</a>
-       <a href="#" class="page-numbers">7</a>
-       <a href="#" class="page-numbers">8</a>
-       <a href="#" class="page-numbers">9</a>
-        <a href="#" class="page-numbers next">Next</a>
-   </nav>
-
-</div>
 
 </section> 
 @endsection

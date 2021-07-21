@@ -19,6 +19,8 @@
       <td>{{$article->description}}</td>
       <td>{{$article->author_name}}</td>
       <td>{{$article->date_of_publish}}</td>
+      <td><a href = 'articles/edit/{{ $article->id }}'>Edit</a></td>
+      <td><a href = 'articles/delete/{{ $article->id }}'>Delete</a></td>
     </tr>
     @endforeach
   </tbody>
