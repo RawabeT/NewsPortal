@@ -23,15 +23,15 @@
 			            <li><a href="category.html">Branding</a></li>
 			         </ul>
 					</li> -->
-					<li><a href="style-guide.html" title="">Styles</a></li>
+					<li><a href="style-guide.html" title="">All News</a></li>
 					<li><a href="about.html" title="">About</a></li>	
 					<li><a href="contact.html" title="">Contact</a></li>										
 				</ul>
 			</nav> <!-- end main-nav-wrap -->
-
-			<div class="search-wrap">
+			<!-- <div class="search-wrap">
 				
 				<form role="search" method="get" class="search-form" action="#">
+				{{ csrf_field() }}
 					<label>
 						<span class="hide-content">Search for:</span>
 						<input type="search" class="search-field" placeholder="Type Your Keywords" value="" name="s" title="Search for:" autocomplete="off">
@@ -41,10 +41,9 @@
 
 				<a href="#" id="close-search" class="close-btn">Close</a>
 
-			</div> <!-- end search wrap -->	
+			</div> end search wrap	 -->
 
 			<div class="triggers">
-				<a class="search-trigger" href="#"><i class="fa fa-search"></i></a>
 				<a class="menu-toggle" href="#"><span>Menu</span></a>
 			</div> <!-- end triggers -->	
    		

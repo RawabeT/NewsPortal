@@ -5,7 +5,6 @@
 
 <div class="row masonry">
 
-    
   <div class="bricks-wrapper">
 
       <div class="grid-sizer"></div>

@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Controller;
+use App\Models\Article;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +21,7 @@ use App\Http\Controllers\ArticleController;
 
 
 Route::get('/' , [ArticleController::class, 'home']);
+Route::any('/allarticles', [Controller::class, 'search'])->name('allarticles');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -33,9 +39,6 @@ Route::post('/articles/edit/{id}' , [ArticleController::class, 'update']);
 Route::get('/articles/delete/{id}' , [ArticleController::class, 'destroy']);
 
 
-// Route::resources([
-//     'articles'=> ArticleController::class
-// ]);
 
 // Route::get('/articles' , [ArticleController::class, 'index']);
 // Route::get('/articles' , [ArticleController::class, 'show']);
