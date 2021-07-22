@@ -39,9 +39,10 @@ class ArticleController extends Controller
         $article ->description = $request->description;
         $article ->author_name = $request->author_name;
         $article ->date_of_publish = Carbon::now();
-        $article ->image = $request ->image;
         $article ->video = $request ->video;
         $article ->category = $request ->category;
+        // $response = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
+        // $article ->image = $response;
         $article-> save();
         return redirect()->route('read');
     }
@@ -89,5 +90,28 @@ class ArticleController extends Controller
     {
         DB::delete('delete from articles where id = ?',[$id]);
         return redirect()->route('articles');
+    }
+
+    public function showUploadForm()
+    {
+        return view('upload');
+    }
+    public function storeUploads(Request $request)
+    {
+        $article = new Article();
+        $article ->title = $request->title;
+        $article ->description = $request->description;
+        $article ->author_name = $request->author_name;
+        $article ->date_of_publish = Carbon::now();
+        $article ->category = $request ->category;
+        $response = cloudinary()->upload($request->file('file')->getRealPath())->getSecurePath();
+        // $responsevideo = cloudinary()->upload($request->file('video')->getRealPath())->getSecurePath();
+        $article ->image = $response;
+        // $article ->video = $responsevideo;
+        $article-> save();
+        dd($response);
+        ddd($responsevideo);
+        return back()
+            ->with('success', 'File uploaded successfully');
     }
 }

@@ -45,7 +45,7 @@ Route::get('/articles/create' , [ArticleController::class, 'create'])->name('art
 Route::get('/articles/edit/{id}' , [ArticleController::class, 'edit']);
 Route::post('/articles/edit/{id}' , [ArticleController::class, 'update']);
 Route::get('/articles/delete/{id}' , [ArticleController::class, 'destroy']);
-
+Route::post('/upload', [ArticleController::class, 'store']);
 
 // Route::get('/articles' , [ArticleController::class, 'index']);
 // Route::get('/articles' , [ArticleController::class, 'show']);
@@ -54,3 +54,7 @@ Route::get('/articles/delete/{id}' , [ArticleController::class, 'destroy']);
 // Route::post('/articles' , [ArticleController::class, 'store']);
 // Route::put('/articles' , [ArticleController::class, 'update']);
 // Route::delete('/articles' , [ArticleController::class, 'destroy']);
+
+
+Route::get('/upload', [ArticleController::class, 'showUploadForm']);
+Route::post('/upload', [ArticleController::class, 'storeUploads']);

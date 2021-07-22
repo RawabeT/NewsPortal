@@ -14,9 +14,10 @@
     {{Session::get('success')}}
 </div>
 @endif
-<form method="POST" action="/articles">
-    @csrf
-  <div class="form-group">
+<form action="/upload" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="">
+                    <div class="form-group">
     <label for="exampleInputEmail1">Article title</label>
     <input type="text" class="form-control" name="title" placeholder="Enter article">
   </div>
@@ -28,14 +29,16 @@
     <label for="exampleInputPassword1">Article description</label>
     <textarea name="description" class="form-control" cols="30" rows="10" placeholder="Add description"></textarea>
 </div>
-<div class="form-group">
-    <label for="exampleInputEmail1">Article image</label>
-    <input type="text" class="form-control" name="image" placeholder="Enter author">
-  </div>
+
   <div class="form-group">
-    <label for="exampleInputEmail1">Article video</label>
-    <input type="text" class="form-control" name="video" placeholder="Enter author">
-  </div>
+    <!-- <input type="file" name="file" class="form-control" > -->
+    <input type="file" name="file" class="form-control" id="img" style="display:none;"/>
+    <label class="btn btn-primary" for="img">Click to upload image</label>
+   </div>
+   <!-- <div class="form-group">
+    <input type="file" name="video" class="form-control" id="vid" style="display:none;"/>
+    <label class="btn btn-primary" for="vid">Click to upload video</label>
+   </div> -->
   <div class="form-group">
     <label for="exampleInputEmail1">Article category</label>
     <select name="category" id="category">
@@ -44,8 +47,13 @@
     <option value="Colors">Colors</option>
   </select>
   </div>
-  <button type="submit" class="btn btn-primary">Add</button>
-</form>
+
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-success">Upload a File</button>
+                        </div>
+
+                    </div>
+                </form>
 
                 </div>
             </div>
