@@ -11,31 +11,30 @@
 
 						<h1 class="entry-title add-bottom">Learn More About Us.</h1>	
 
-						<p class="lead">Lorem ipsum Nisi cillum reprehenderit minim sunt dolore dolor eiusmod eu aliquip ad ut sint dolore laborum voluptate ullamco dolore aliquip enim. Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing</p> 
+						<p class="lead">We’re impartial and independent, and every day we create distinctive, world-class programmes and content which inform, educate and entertain millions of people in the UK and around the world.</p> 
 
-						<p>Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.</p>
+						<p>Ten UK-wide radio networks, providing the best live music broadcasting in the UK, as well as speech radio which informs, educates and entertains. We also have two national radio services each in Scotland, Wales and Northern Ireland and 39 local radio stations across England and the Channel Islands, providing an invaluable and unique service to listeners across the UK</p>
 
-						<p>Lorem ipsum Cillum sit sunt dolore non aute enim pariatur deserunt magna reprehenderit veniam officia ullamco eiusmod laborum commodo veniam elit proident enim sit cillum ex aliquip dolore labore sint ut deserunt officia veniam consectetur in in quis eu consectetur non sint Duis mollit Ut magna irure.</p>
-
+						<p>Our digital services including BBC News, Sport, Weather CBBC and CBeebies, iPlayer and BBC Sounds, BBC Red Button and our vast archive</p>
 						<div class="row block-1-2 block-tab-full">
 							<div class="bgrid">
 								<h3>Who.</h3>
-								<p>Lorem ipsum Nisi amet fugiat eiusmod et aliqua ad qui ut nisi Ut aute anim mollit fugiat qui sit ex occaecat et eu mollit nisi pariatur fugiat deserunt dolor veniam reprehenderit aliquip magna nisi consequat aliqua veniam in aute ullamco Duis laborum ad non pariatur sit.</p>
+								<p>The Commercial Holdings Board is responsible for the governance, assurance and oversight of the BBC’s commercial subsidiaries</p>
 							</div>
 
 							<div class="bgrid">
 								<h3>When.</h3>
-								<p>Lorem ipsum Nisi amet fugiat eiusmod et aliqua ad qui ut nisi Ut aute anim mollit fugiat qui sit ex occaecat et eu mollit nisi pariatur fugiat deserunt dolor veniam reprehenderit aliquip magna nisi consequat aliqua veniam in aute ullamco Duis laborum ad non pariatur sit.</p>
+								<p>The Comptroller and Auditor General, supported by the National Audit Office, is our external auditor</p>
 							</div>
 
 							<div class="bgrid">
 								<h3>What.</h3>
-								<p>Lorem ipsum Nisi amet fugiat eiusmod et aliqua ad qui ut nisi Ut aute anim mollit fugiat qui sit ex occaecat et eu mollit nisi pariatur fugiat deserunt dolor veniam reprehenderit aliquip magna nisi consequat aliqua veniam in aute ullamco Duis laborum ad non pariatur sit.</p>
+								<p>We provide a wide range of programmes, content and services on television, radio and online for audiences across the UK</p>
 							</div>
 
 							<div class="bgrid">
 								<h3>How.</h3>
-								<p>Lorem ipsum Nisi amet fugiat eiusmod et aliqua ad qui ut nisi Ut aute anim mollit fugiat qui sit ex occaecat et eu mollit nisi pariatur fugiat deserunt dolor veniam reprehenderit aliquip magna nisi consequat aliqua veniam in aute ullamco Duis laborum ad non pariatur sit.</p>
+								<p>Our commercial operations generate income to invest in new programmes and content</p>
 							</div>
 
 						</div>

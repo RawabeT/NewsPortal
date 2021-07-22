@@ -44,7 +44,10 @@
     <select name="category" id="category">
     <option value="Desgin">Desgin</option>
     <option value="Art">Art</option>
-    <option value="Colors">Colors</option>
+    <option value="Digitl">Digitl</option>
+    <option value="Computer">Computer</option>
+    <option value="Games">Games</option>
+    <option value="Study">Study</option>
   </select>
   </div>
 

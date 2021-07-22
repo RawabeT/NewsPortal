@@ -8,8 +8,7 @@
 
 	            <h4>About Our Site</h4>
 
-	               <p>
-		          	Lorem ipsum Ut velit dolor Ut labore id fugiat in ut fugiat nostrud qui in dolore commodo eu magna Duis cillum dolor officia esse mollit proident Excepteur exercitation nulla. Lorem ipsum In reprehenderit commodo aliqua irure labore.
+	               <p>We’re impartial and independent, and every day we create distinctive, world-class programmes and content which inform, educate and entertain millions of people in the UK and around the world.
 		          	</p>
 
 		      </div> 
@@ -19,9 +18,8 @@
 	      		<h4>Site Links</h4>
 
 	      		<ul>
-	      			<li><a href="#">About Us</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">FAQ</a></li>
+	      			<li><a href="/about">About Us</a></li>
+						<li><a href="/contact">Contact</a></li>
 						<li><a href="#">Terms</a></li>
 						<li><a href="#">Privacy Policy</a></li>
 					</ul>
@@ -33,11 +31,8 @@
 	      		<h4>Social</h4>
 
 	      		<ul>
-	      			<li><a href="#">Twitter</a></li>
-						<li><a href="#">Facebook</a></li>
-						<li><a href="#">Dribbble</a></li>
-						<li><a href="#">Google+</a></li>
-						<li><a href="#">Instagram</a></li>
+	      			<li><a href="https://twitter.com/bbcpress">Twitter</a></li>
+						<li><a href="https://www.facebook.com/bbcnews/">Facebook</a></li>
 					</ul>
 	      	           	
 	      	</div> 
@@ -73,8 +68,7 @@
 
       		<div class="col-twelve">
 	      		<div class="copyright">
-		         	<span>© Copyright Abstract 2016</span> 
-		         	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>		         	
+		         	<span>© Copyright BBC</span> 
 		         </div>
 
 		         <div id="go-top">

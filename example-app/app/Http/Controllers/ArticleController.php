@@ -56,15 +56,21 @@ class ArticleController extends Controller
         //             ->pluck('count');
 
         //number of articles of each category            
-        $art = Article::where('category','art')->get();
-    	$design = Article::where('category','design')->get();
-    	$digitl = Article::where('category','digitl')->get();
+        $art = Article::where('category','Art')->get();
+    	$design = Article::where('category','Design')->get();
+    	$digitl = Article::where('category','Digitl')->get();
+        $computer = Article::where('category','Computer')->get();
+    	$games = Article::where('category','Games')->get();
+    	$study = Article::where('category','Study')->get();
     	$art_c = count($art);    	
     	$design_c = count($design);
     	$digitl_c = count($digitl);
+        $computer_C = count($computer);    	
+    	$games_c = count($games);
+    	$study_c = count($study);
 
         $articleCount = DB::table('articles')->count();
-        return view('dashboard', compact('art_c','design_c','digitl_c', 'articleCount'));
+        return view('dashboard', compact('art_c','design_c','digitl_c','computer_C','games_c','study_c', 'articleCount'));
     }
 
     public function show($id)
@@ -92,10 +98,6 @@ class ArticleController extends Controller
         return redirect()->route('articles');
     }
 
-    public function showUploadForm()
-    {
-        return view('upload');
-    }
     public function storeUploads(Request $request)
     {
         $article = new Article();
@@ -109,9 +111,6 @@ class ArticleController extends Controller
         $article ->image = $response;
         // $article ->video = $responsevideo;
         $article-> save();
-        dd($response);
-        ddd($responsevideo);
-        return back()
-            ->with('success', 'File uploaded successfully');
+        return redirect()->route('articles');
     }
 }

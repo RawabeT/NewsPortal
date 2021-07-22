@@ -81,7 +81,7 @@
 
         <div class="entry-thumb">
            <a href="/details/{{$article->id}}" class="thumb-link">
-               <img src="images/thumbs/diagonal-building.jpg" alt="building">             
+               <img src="{{$article->image}}" alt="building">             
            </a>
         </div>
 

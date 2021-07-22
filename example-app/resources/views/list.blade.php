@@ -40,7 +40,7 @@
 
         <div class="entry-thumb">
            <a href="single-standard.html" class="thumb-link">
-               <img src="images/thumbs/diagonal-building.jpg" alt="building">             
+               <img src="{{$article->image}}" alt="building">             
            </a>
         </div>
 

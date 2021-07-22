@@ -5,9 +5,9 @@
 
    	<div class="row header-content">
 
-   		<!-- <div class="logo">
-	         <a href="index.html">Author</a>
-	      </div> -->
+   		<div class="logo">
+			 <img src="images/logo_bbc.png" alt="" width = "100px">
+	      </div>
 
 	   	<nav id="main-nav-wrap">
 				<ul class="main-navigation sf-menu">

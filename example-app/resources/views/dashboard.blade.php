@@ -10,7 +10,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
 
 <div class="row d-flex justify-content-center">
-<div class="col">
+<!-- <div class="col">
 <div class="" style="width: 20rem;">
   <div class="card-body">
     <h1 class="card-title">Total News</h1>
@@ -18,10 +18,10 @@
     <h6 class="card-subtitle mb-2 text-muted">{{$articleCount}}</h6>
   </div>
 </div>
-</div>
+</div> -->
 
 <div class="col">
-<h1>Number of Articles</h1>
+<h1 class="text-center">Articles</h1>
     <div id="container"></div>
 </div>
 </div>
@@ -37,7 +37,7 @@
 
     Highcharts.chart('container', {
         title: {
-            text: 'New Articles Growth, 2021'
+            text: 'Total Articles {{$articleCount}}'
         },
         subtitle: {
             text: 'Source: Articles.com'
@@ -65,7 +65,10 @@
             data: [
                     {{$art_c}},
                     {{$design_c}}, 
-                    {{$digitl_c}}
+                    {{$digitl_c}},
+                    {{$computer_C}},
+                    {{$games_c}}, 
+                    {{$study_c}}
                 ]
         }],
         responsive: {

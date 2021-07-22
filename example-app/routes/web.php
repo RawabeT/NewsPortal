@@ -8,18 +8,6 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-
 Route::get('/' , [ArticleController::class, 'home']);
 Route::any('/allarticles', [Controller::class, 'search'])->name('allarticles');
 Route::get('/details/{id}', [Controller::class,'details']);
@@ -30,10 +18,6 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
 
 Route::get('/dashboard', [ArticleController::class, 'handleChart'])->middleware(['auth'])->name('dashboard');
 Route::resource('articles', ArticleController::class);
@@ -46,15 +30,4 @@ Route::get('/articles/edit/{id}' , [ArticleController::class, 'edit']);
 Route::post('/articles/edit/{id}' , [ArticleController::class, 'update']);
 Route::get('/articles/delete/{id}' , [ArticleController::class, 'destroy']);
 Route::post('/upload', [ArticleController::class, 'store']);
-
-// Route::get('/articles' , [ArticleController::class, 'index']);
-// Route::get('/articles' , [ArticleController::class, 'show']);
-// Route::get('/articles/create' , [ArticleController::class, 'create']);
-// Route::get('/articles/id/edit' , [ArticleController::class, 'edit']);
-// Route::post('/articles' , [ArticleController::class, 'store']);
-// Route::put('/articles' , [ArticleController::class, 'update']);
-// Route::delete('/articles' , [ArticleController::class, 'destroy']);
-
-
-Route::get('/upload', [ArticleController::class, 'showUploadForm']);
 Route::post('/upload', [ArticleController::class, 'storeUploads']);
