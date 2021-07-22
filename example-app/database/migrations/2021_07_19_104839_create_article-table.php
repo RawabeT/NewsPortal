@@ -19,6 +19,9 @@ class CreateArticleTable extends Migration
             $table->timestamp('date_of_publish')->nullable();
             $table->string('title')->nullable();
             $table->longText('description')->nullable();
+            $table->binary('image')->nullable() ; 
+            $table->binary('video')->nullable() ; 
+            $table->text('category')->nullable();
         });
     }
 

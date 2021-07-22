@@ -338,7 +338,6 @@ fieldset {
 	margin-bottom: 1.5rem;
 }
 
-input,
 textarea,
 select,
 pre,
@@ -556,7 +555,6 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-	display: block;
 	height: 6rem;
 	padding: 1.5rem 2.5rem;
 	border: 0;
@@ -566,7 +564,7 @@ select {
 	font-family: "roboto-regular", sans-serif;
 	font-size: 1.5rem;
 	line-height: 3rem;
-	max-width: 100%;
+	width: 70%;
 	background: rgba(0, 0, 0, 0.1);
 	border: none;
 	-moz-transition: all 0.3s ease-in-out;

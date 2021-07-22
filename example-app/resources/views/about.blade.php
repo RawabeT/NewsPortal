@@ -7,10 +7,6 @@
 
    			<section>  
 
-   				<div class="content-media">						
-						<img src="images/thumbs/about-us.jpg">						  
-					</div>
-
 					<div class="primary-content">
 
 						<h1 class="entry-title add-bottom">Learn More About Us.</h1>	

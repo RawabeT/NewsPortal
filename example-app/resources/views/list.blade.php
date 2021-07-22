@@ -4,26 +4,23 @@
 <section id="page-header">
    	<div class="row current-cat">
    		<div class="col-full">
-   			<h1>Category: Photography</h1>
+   			<h1>All Articles</h1>
    		</div>   		
    	</div>
 
    </section>
    <section id="page-header">
    	<div class="row current-cat">
-   		<div class="col-full">
-			   <form action="/allarticles" method="get" role="search">
+	   <form action="/allarticles" method="get" role="search">
     {{ csrf_field() }}
     <div class="input-group">
         <input type="text" class="form-control" name="s"
-            placeholder="Search by article title or description"> <span class="input-group-btn">
-            <button type="submit" class="btn btn-default">
-                <span class="glyphicon glyphicon-search"></span>
+            placeholder="Search by article title or description">
+            <button type="submit" class="btn btn-default">Search
             </button>
-        </span>
+      
     </div>
-   </form>
-   		</div>   		
+   </form>	
    	</div>
 
    </section>
@@ -52,8 +49,7 @@
 
                 <div class="entry-meta">
                     <span class="cat-links">
-                        <a href="#">Design</a> 
-                        <a href="#">Photography</a>               				
+                        <a href="#">{{$article->category}}</a>             				
                     </span>			
                 </div>
 

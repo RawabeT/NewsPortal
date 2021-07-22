@@ -1,7 +1,14 @@
-@extends('dashboard')
-@section('content')
-
-<table class="table">
+<x-app-layout>
+<x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Articles') }}
+        </h2>
+    </x-slot>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 bg-white border-b border-gray-200">
+                <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -9,6 +16,9 @@
       <th scope="col">Description</th>
       <th scope="col">Author Name</th>
       <th scope="col">Date of Publish</th>
+      <th scope="col">Image </th>
+      <th scope="col">Video </th>
+      <th scope="col">Category </th>
     </tr>
   </thead>
   <tbody>
@@ -19,6 +29,9 @@
       <td>{{$article->description}}</td>
       <td>{{$article->author_name}}</td>
       <td>{{$article->date_of_publish}}</td>
+      <td><img src="{{'$article->image'}}" width="50px"/></td>
+      <td><img src="{{'$article->video'}}" width="50px"/></td>
+      <td>{{$article->category}}</td>
       <td><a href = 'articles/edit/{{ $article->id }}'>Edit</a></td>
       <td><a href = 'articles/delete/{{ $article->id }}'>Delete</a></td>
     </tr>
@@ -29,5 +42,9 @@
 <div class="d-flex justify-content-center">
     {!! $articles->links() !!}
 </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-@endsection
+</x-app-layout>

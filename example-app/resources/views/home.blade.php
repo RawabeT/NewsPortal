@@ -80,7 +80,7 @@
       <article class="brick entry format-standard animate-this">
 
         <div class="entry-thumb">
-           <a href="single-standard.html" class="thumb-link">
+           <a href="/details/{{$article->id}}" class="thumb-link">
                <img src="images/thumbs/diagonal-building.jpg" alt="building">             
            </a>
         </div>
@@ -90,8 +90,7 @@
 
                 <div class="entry-meta">
                     <span class="cat-links">
-                        <a href="#">Design</a> 
-                        <a href="#">Photography</a>               				
+                        <a href="#">{{$article->category}}</a>               				
                     </span>			
                 </div>
 
@@ -189,63 +188,6 @@
                   </cite>
             </div>	
         </div>               
-        
-         </article> <!-- end article -->
-
-
-      <article class="brick entry animate-this">
-
-        <div class="entry-thumb">
-           <a href="single-standard.html" class="thumb-link">
-               <img src="images/thumbs/diagonal-pattern.jpg" alt="Pattern">              
-           </a>
-        </div>
-
-        <div class="entry-text">
-            <div class="entry-header">
-
-                <div class="entry-meta">
-                    <span class="cat-links">
-                        <a href="#">Design</a> 
-                        <a href="#">UI</a>                			
-                    </span>			
-                </div>
-
-                <h1 class="entry-title"><a href="single-standard.html">You Can See Patterns Everywhere.</a></h1>
-                
-            </div>
-                 <div class="entry-excerpt">
-                     Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                 </div>
-        </div>
-        
-         </article> <!-- end article -->
-
-         <article class="brick entry format-video animate-this">
-
-        <div class="entry-thumb video-image">
-           <a href="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=F64B39" data-lity>
-               <img src="images/thumbs/ottawa-bokeh.jpg" alt="bokeh">                   
-           </a>
-        </div>
-
-        <div class="entry-text">
-            <div class="entry-header">
-
-                <div class="entry-meta">
-                    <span class="cat-links">
-                        <a href="#">Design</a> 
-                        <a href="#">Branding</a>               			
-                    </span>			
-                </div>
-
-                <h1 class="entry-title"><a href="single-video.html">This Is a Video Post Format.</a></h1>
-                
-            </div>
-                 <div class="entry-excerpt">
-                     Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
-                 </div>
-        </div>
         
          </article> <!-- end article -->
 

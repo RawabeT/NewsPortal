@@ -29,4 +29,9 @@ class Controller extends BaseController
         else return view ('list')->withMessage('No Details found. Try to search again !');
 
     }
+
+    public function details($id){
+        $article = DB::select('select * from articles where id = ?',[$id]);
+        return view('detail',['articles'=>$article]);
+    }
 }

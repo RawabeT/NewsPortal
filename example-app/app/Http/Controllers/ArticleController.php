@@ -39,23 +39,37 @@ class ArticleController extends Controller
         $article ->description = $request->description;
         $article ->author_name = $request->author_name;
         $article ->date_of_publish = Carbon::now();
+        $article ->image = $request ->image;
+        $article ->video = $request ->video;
+        $article ->category = $request ->category;
         $article-> save();
-        return redirect()->route('dashboard')->with('success','Post created successfully.');
+        return redirect()->route('read');
     }
 
     public function handleChart()
     {
-        $articleData = Article::select(\DB::raw("COUNT(*) as count"))
-                    ->whereYear('date_of_publish', date('Y'))
-                    ->groupBy(\DB::raw("Day(date_of_publish)"))
-                    ->pluck('count');
-          
-        return view('charts', compact('articleData'));
+        //number of articles by days
+        // $articleData = Article::select(\DB::raw("COUNT(*) as count"))
+        //             ->whereYear('date_of_publish', date('Y'))
+        //             ->groupBy(\DB::raw("Day(date_of_publish)"))
+        //             ->pluck('count');
+
+        //number of articles of each category            
+        $art = Article::where('category','art')->get();
+    	$design = Article::where('category','design')->get();
+    	$digitl = Article::where('category','digitl')->get();
+    	$art_c = count($art);    	
+    	$design_c = count($design);
+    	$digitl_c = count($digitl);
+
+        $articleCount = DB::table('articles')->count();
+        return view('dashboard', compact('art_c','design_c','digitl_c', 'articleCount'));
     }
 
-    public function show(Article $article)
+    public function show($id)
     {
-        //
+        //return Article::find($article->id);
+        return view('detail')->with('article',Article::find($id));
     }
 
     public function edit($id)

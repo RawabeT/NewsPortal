@@ -22,12 +22,20 @@ use Illuminate\Http\Request;
 
 Route::get('/' , [ArticleController::class, 'home']);
 Route::any('/allarticles', [Controller::class, 'search'])->name('allarticles');
+Route::get('/details/{id}', [Controller::class,'details']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
 
-Route::get('/chart', [ArticleController::class, 'handleChart']);
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
+
+Route::get('/dashboard', [ArticleController::class, 'handleChart'])->middleware(['auth'])->name('dashboard');
 Route::resource('articles', ArticleController::class);
 
 require __DIR__.'/auth.php';
@@ -37,7 +45,6 @@ Route::get('/articles/create' , [ArticleController::class, 'create'])->name('art
 Route::get('/articles/edit/{id}' , [ArticleController::class, 'edit']);
 Route::post('/articles/edit/{id}' , [ArticleController::class, 'update']);
 Route::get('/articles/delete/{id}' , [ArticleController::class, 'destroy']);
-
 
 
 // Route::get('/articles' , [ArticleController::class, 'index']);

@@ -8,12 +8,6 @@
    			<section>  
 
    				<div class="content-media">
-						<div id="map-wrap">
-			   			<div id="map-container"></div>
-					      <div id="map-zoom-in"></div>
-							<div id="map-zoom-out"></div>
-			   		</div>  
-					</div>
 
 					<div class="primary-content">
 
