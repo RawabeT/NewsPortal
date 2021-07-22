@@ -9,7 +9,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                 <table class="table">
-  <thead>
+  <thead class="table-dark">
     <tr>
       <th scope="col">#</th>
       <th scope="col">Title</th>
@@ -19,6 +19,8 @@
       <th scope="col">Image </th>
       <th scope="col">Video </th>
       <th scope="col">Category </th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
     </tr>
   </thead>
   <tbody>

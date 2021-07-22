@@ -17,7 +17,9 @@ Route::get('/about', function () {
 });
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contacts');
+
+Route::post('/contact' , [Controller::class, 'contact']);
 
 Route::get('/dashboard', [ArticleController::class, 'handleChart'])->middleware(['auth'])->name('dashboard');
 Route::resource('articles', ArticleController::class);
@@ -29,5 +31,4 @@ Route::get('/articles/create' , [ArticleController::class, 'create'])->name('art
 Route::get('/articles/edit/{id}' , [ArticleController::class, 'edit']);
 Route::post('/articles/edit/{id}' , [ArticleController::class, 'update']);
 Route::get('/articles/delete/{id}' , [ArticleController::class, 'destroy']);
-Route::post('/upload', [ArticleController::class, 'store']);
 Route::post('/upload', [ArticleController::class, 'storeUploads']);

@@ -32,21 +32,6 @@ class ArticleController extends Controller
         return view('create');
     }
 
-    public function store(Request $request)
-    {
-        $article = new Article();
-        $article ->title = $request->title;
-        $article ->description = $request->description;
-        $article ->author_name = $request->author_name;
-        $article ->date_of_publish = Carbon::now();
-        $article ->video = $request ->video;
-        $article ->category = $request ->category;
-        // $response = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
-        // $article ->image = $response;
-        $article-> save();
-        return redirect()->route('read');
-    }
-
     public function handleChart()
     {
         //number of articles by days
@@ -75,7 +60,6 @@ class ArticleController extends Controller
 
     public function show($id)
     {
-        //return Article::find($article->id);
         return view('detail')->with('article',Article::find($id));
     }
 

@@ -9,7 +9,8 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\DB;
 use App\Models\Article;
 use Illuminate\Http\Request;
-
+use App\Models\Contact;
+use Carbon\Carbon;
 
 class Controller extends BaseController
 {
@@ -33,5 +34,15 @@ class Controller extends BaseController
     public function details($id){
         $article = DB::select('select * from articles where id = ?',[$id]);
         return view('detail',['articles'=>$article]);
+    }
+
+    public function contact(Request $request){
+        $contact = new Contact();
+        $contact->username = $request->username;
+        $contact->email = $request->email;
+        $contact->message = $request->message;
+        $contact->created_at = Carbon::now();
+        $contact->save();
+        return redirect()->route('contacts');
     }
 }
