@@ -45,6 +45,7 @@ class ArticleController extends Controller
         $article ->author_name = $request->author_name;
         $article ->date_of_publish = Carbon::now();
         $article ->category = $request ->category;
+        $article -> user_id = auth()->id();
         if ($request->file('file')) {
             $response = cloudinary()->upload($request->file('file')->getRealPath())->getSecurePath();
         }

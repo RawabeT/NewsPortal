@@ -27,7 +27,8 @@ class ArticleFactory extends Factory
             'description' => $this->faker->text,
             'category' => 'Art',
             'date_of_publish' => $this->faker->date,
-            'image' => $this->faker->imageUrl($width = 400, $height = 200)
+            'image' => $this->faker->imageUrl($width = 400, $height = 200),
+            'user_id' => (1)
         ];
     }
 }

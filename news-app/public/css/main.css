@@ -2760,7 +2760,7 @@ footer ul li {
 
 .blog-single .author-profile a,
 .blog-single .author-profile a:visited {
-	color: var(--dark);
+	color: var(--white);
 }
 
 .blog-single .author-profile img {

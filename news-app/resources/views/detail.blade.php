@@ -48,7 +48,7 @@
 
 					</div> <!-- end entry-primary -->		  			   
 
-	  			   <div class="pagenav group">
+	  			   <!-- <div class="pagenav group">
 		  			   <div class="prev-nav">
 		  			   	<a href="#" rel="prev">
 		  			   		<span>Previous</span>
@@ -61,7 +61,7 @@
 		  			   		Less Is More 
 		  					</a>
 		  				</div>  				   
-	  				</div>
+	  				</div> -->
 
 				</article>
    		
