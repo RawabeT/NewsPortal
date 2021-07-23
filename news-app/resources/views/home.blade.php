@@ -88,6 +88,7 @@
             @endif             
            </a>
         </div>
+        
 
         <div class="entry-text">
             <div class="entry-header">

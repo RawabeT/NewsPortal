@@ -93,7 +93,7 @@
 
 	                     <div class="comment-text">
 	                        <p>Adhuc quaerendum est ne, vis ut harum tantas noluisse, id suas iisque mei. Nec te inani ponderum vulputate,
-	                        facilisi expetenda has et. Iudico dictas scriptorem an vim, ei alia mentitum est, ne has voluptua praesent.</p>
+	                        facilisi  has et. Iudico dictas scriptorem an vim, ei alia mentitum est, ne has voluptua praesent.</p>
 	                     </div>
 
 	                  </div>
