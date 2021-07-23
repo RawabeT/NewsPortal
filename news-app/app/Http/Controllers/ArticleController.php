@@ -6,6 +6,7 @@ use App\Models\Article;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Input;
 
 
 class ArticleController extends Controller
@@ -30,6 +31,33 @@ class ArticleController extends Controller
     public function create()
     {
         return view('create');
+    }
+
+    public function storeUploads(Request $request)
+    {
+        $validated = $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+        ]);
+        $article = new Article();
+        $article ->title = $request->title;
+        $article ->description = $request->description;
+        $article ->author_name = $request->author_name;
+        $article ->date_of_publish = Carbon::now();
+        $article ->category = $request ->category;
+        if ($request->file('file')) {
+            $response = cloudinary()->upload($request->file('file')->getRealPath())->getSecurePath();
+        }
+        else{
+            // $response = $request->get("https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg");
+            $article-> save();
+            return redirect()->route('articles');
+        }
+        // $responsevideo = cloudinary()->upload($request->file('video')->getRealPath())->getSecurePath();
+        $article ->image = $response;
+        // $article ->video = $responsevideo;
+        $article-> save();
+        return redirect()->route('articles');
     }
 
     public function handleChart()
@@ -71,8 +99,12 @@ class ArticleController extends Controller
 
     public function update(Request $request, $id)
     {
-        $article = $request->input('title');
-        DB::update('update articles set title = ? where id = ?',[$article,$id]);
+        $article = Article::find($id);
+        $article ->title = $request->title;
+        $article ->description = $request->description;
+        $article ->author_name = $request->author_name;
+        $article ->category = $request ->category;
+        $article->save();
         return redirect()->route('articles');
     }
 
@@ -82,19 +114,4 @@ class ArticleController extends Controller
         return redirect()->route('articles');
     }
 
-    public function storeUploads(Request $request)
-    {
-        $article = new Article();
-        $article ->title = $request->title;
-        $article ->description = $request->description;
-        $article ->author_name = $request->author_name;
-        $article ->date_of_publish = Carbon::now();
-        $article ->category = $request ->category;
-        $response = cloudinary()->upload($request->file('file')->getRealPath())->getSecurePath();
-        // $responsevideo = cloudinary()->upload($request->file('video')->getRealPath())->getSecurePath();
-        $article ->image = $response;
-        // $article ->video = $responsevideo;
-        $article-> save();
-        return redirect()->route('articles');
-    }
 }

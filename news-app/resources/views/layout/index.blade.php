@@ -11,9 +11,9 @@
    
    @include('layout.footer')
 
-   <div id="preloader"> 
+   <!-- <div id="preloader"> 
     	<div id="loader"></div>
-   </div> 
+   </div>  -->
    @include('layout.bottom')
 
 </body>

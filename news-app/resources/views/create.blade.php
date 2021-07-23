@@ -20,6 +20,9 @@
                     <div class="form-group">
     <label for="exampleInputEmail1">Article title</label>
     <input type="text" class="form-control" name="title" placeholder="Enter article">
+    @error('title')
+    <div class="alert alert-danger ">{{ $message }}</div>
+@enderror
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Article author</label>
@@ -28,6 +31,9 @@
   <div class="form-group">
     <label for="exampleInputPassword1">Article description</label>
     <textarea name="description" class="form-control" cols="30" rows="10" placeholder="Add description"></textarea>
+    @error('description')
+    <div class="alert alert-danger ">{{ $message }}</div>
+@enderror
 </div>
 
   <div class="form-group">

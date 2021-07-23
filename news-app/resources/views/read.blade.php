@@ -31,7 +31,14 @@
       <td>{{$article->description}}</td>
       <td>{{$article->author_name}}</td>
       <td>{{$article->date_of_publish}}</td>
-      <td><img src="{{$article->image}}" width="50px"/></td>
+      
+      <td>
+      @if(!is_null($article->image)) 
+      <img src="{{$article->image}}" width="50px"/>
+      @else
+      <img src="images/thumbs/lighthouse.jpg" width="50px"/>
+      @endif
+    </td>
       <td><img src="{{$article->video}}" width="50px"/></td>
       <td>{{$article->category}}</td>
       <td><a href = 'articles/edit/{{ $article->id }}'>Edit</a></td>

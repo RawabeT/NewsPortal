@@ -13,15 +13,15 @@
     @csrf
   <div class="form-group">
     <label for="exampleInputEmail1">Article title</label>
-    <input type="text" class="form-control" name="title" placeholder="Enter article title">
+    <input type="text" class="form-control" name="title" placeholder="Enter article title" value="{{$articles[0]->title}}">
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Article author</label>
-    <input type="text" class="form-control" name="author_name" placeholder="Enter author">
+    <input type="text" class="form-control" name="author_name" placeholder="Enter author" value="{{$articles[0]->author_name}}">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Article description</label>
-    <textarea name="description" class="form-control" cols="30" rows="10" placeholder="Add description"></textarea>
+    <textarea name="description" class="form-control" cols="30" rows="10" placeholder="Add description">{{$articles[0]->description}}</textarea>
 </div>
 <div class="form-group">
     <label for="exampleInputEmail1">Article image</label>
@@ -36,7 +36,10 @@
     <select name="category" id="category">
     <option value="Desgin">Desgin</option>
     <option value="Art">Art</option>
-    <option value="Colors">Colors</option>
+    <option value="Digitl">Digitl</option>
+    <option value="Computer">Computer</option>
+    <option value="Games">Games</option>
+    <option value="Study">Study</option>
   </select>
   </div>
   <button type="submit" class="btn btn-primary">Edit</button>

@@ -40,7 +40,11 @@
 
         <div class="entry-thumb">
            <a href="single-standard.html" class="thumb-link">
-               <img src="{{$article->image}}" alt="building">             
+           @if(!is_null($article->image)) 
+               <img src="{{$article->image}}" alt="building">
+               @else
+              <img src="images/cartoon.jpeg" />
+            @endif  
            </a>
         </div>
 
