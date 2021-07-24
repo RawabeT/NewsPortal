@@ -13,6 +13,11 @@ class CommentController extends Controller
 {
     public function store(Request $request, $id)
     {
+        $request->validate([
+            'username' => 'required',
+            'email' => 'email',
+            'comment' => 'required',
+        ]);
 
         $article = Article::find($id);
         $comment = new Comment();

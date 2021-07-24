@@ -17,7 +17,7 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function index(){
-        return view('list', [
+        return view('public.list', [
             'articles' => DB::table('articles')-> paginate(5)
         ]);
     }
@@ -26,15 +26,15 @@ class Controller extends BaseController
         $s = trim($request->get('s'));
         $article = Article::where('title','LIKE','%'.$s.'%')->orWhere('description','LIKE','%'.$s.'%')->get();
         if(count($article) > 0)
-            return view('list')->withDetails($article)->withQuery ( $s );
-        else return view ('list')->withMessage('No Details found. Try to search again !');
+            return view('public.list')->withDetails($article)->withQuery ( $s );
+        else return view ('public.list')->withMessage('No Details found. Try to search again !');
 
     }
 
     public function details($id){
         $article = DB::select('select * from articles where id = ?',[$id]);
         $comment = DB::select('select * from comments where article_id = ?',[$id]);
-        return view('detail',['articles'=>$article],['comments'=>$comment]);
+        return view('public.detail',['articles'=>$article],['comments'=>$comment]);
     }
 
     public function contact(Request $request){

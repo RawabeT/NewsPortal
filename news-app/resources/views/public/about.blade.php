@@ -1,4 +1,4 @@
-@extends('layout.index')
+@extends('public.layout.index')
 @section('content')
 
 <section id="content-wrap" class="site-page">

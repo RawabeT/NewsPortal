@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en"> 
 <head>
-	@include('layout.top')
+	@include('public.layout.top')
 </head>
 
 <body id="top">
-	@include('layout.header')
+	@include('public.layout.header')
 
 	@yield('content')
    
-   @include('layout.footer')
+   @include('public.layout.footer')
 
    <!-- <div id="preloader"> 
     	<div id="loader"></div>
    </div>  -->
-   @include('layout.bottom')
+   @include('public.layout.bottom')
 
 </body>
 

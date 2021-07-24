@@ -15,10 +15,10 @@ Route::get('/details/{id}', [Controller::class,'details']);
 Route::post('/contact' , [Controller::class, 'contact']);
 
 Route::get('/about', function () {
-    return view('about');
+    return view('public.about');
 });
 Route::get('/contact', function () {
-    return view('contact');
+    return view('public.contact');
 })->name('contacts');
 
 Route::get('/' , [ArticleController::class, 'home']);

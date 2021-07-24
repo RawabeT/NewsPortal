@@ -1,4 +1,4 @@
-@extends('layout.index')
+@extends('public.layout.index')
 @section('content')
 
    <section id="content-wrap" class="blog-single">
@@ -114,11 +114,17 @@
 						 @csrf
 
                      <div class="form-field">
-  						      <input name="username" type="text" id="cName" class="full-width" placeholder="Your Name" value="">
+  						      <input name="username" type="text" id="cName" class="full-width @error('username') is-invalid @enderror" placeholder="Your Name" value="">
+								@error('username')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                           @enderror
                      </div>
 
                      <div class="form-field">
-  						      <input name="email" type="text" id="cEmail" class="full-width" placeholder="Your Email" value="">
+  						      <input name="email" type="text" id="cEmail" class="full-width @error('username') is-invalid @enderror" placeholder="Your Email" value="">
+								@error('email')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                           @enderror
                      </div>
 
                      <div class="message form-field">

@@ -14,14 +14,14 @@ class ArticleController extends Controller
 
     public function index()
     {
-        return view('read', [
+        return view('operations.read', [
             'articles' => DB::table('articles')-> paginate(5)
         ]);
     }
 
     public function home()
     {
-        return view('home', [
+        return view('public.home', [
             'articles' => DB::table('articles')->orderBy('date_of_publish', 'desc')
             ->take(10)
             ->get()
@@ -30,7 +30,7 @@ class ArticleController extends Controller
 
     public function create()
     {
-        return view('create');
+        return view('operations.create');
     }
 
     public function storeUploads(Request $request)
@@ -88,13 +88,13 @@ class ArticleController extends Controller
 
     public function show($id)
     {
-        return view('detail')->with('article',Article::find($id));
+        return view('public.detail')->with('article',Article::find($id));
     }
 
     public function edit($id)
     {
         $articles = DB::select('select * from articles where id = ?',[$id]);
-        return view('edit',['articles'=>$articles]);
+        return view('operations.edit',['articles'=>$articles]);
     }
 
     public function update(Request $request, $id)
