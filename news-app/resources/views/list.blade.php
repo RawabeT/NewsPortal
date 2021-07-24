@@ -39,7 +39,7 @@
       <article class="brick entry format-standard animate-this">
 
         <div class="entry-thumb">
-           <a href="single-standard.html" class="thumb-link">
+           <a href="/details/{{$article->id}}"class="thumb-link">
            @if(!is_null($article->image)) 
                <img src="{{$article->image}}" alt="building">
                @else
@@ -57,7 +57,7 @@
                     </span>			
                 </div>
 
-                <h1 class="entry-title"><a href="single-standard.html">{{$article->title}}</a></h1>
+                <h1 class="entry-title"><a href="/details/{{$article->id}}">{{$article->title}}</a></h1>
                 
             </div>
                  <div class="entry-excerpt">

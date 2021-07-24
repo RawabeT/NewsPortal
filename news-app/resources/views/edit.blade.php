@@ -9,7 +9,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                    
-<form method="POST" action="/articles/edit/<?php echo $articles[0]->id; ?>">
+<form method="POST" action="/articles/edit/<?php echo $articles[0]->id; ?>" enctype="multipart/form-data">
     @csrf
   <div class="form-group">
     <label for="exampleInputEmail1">Article title</label>
@@ -24,13 +24,10 @@
     <textarea name="description" class="form-control" cols="30" rows="10" placeholder="Add description">{{$articles[0]->description}}</textarea>
 </div>
 <div class="form-group">
-    <label for="exampleInputEmail1">Article image</label>
-    <input type="text" class="form-control" name="image" placeholder="Enter image">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Article video</label>
-    <input type="text" class="form-control" name="video" placeholder="Enter video">
-  </div>
+    <!-- <input type="file" name="file" class="form-control" > -->
+    <input type="file" name="file" class="form-control" id="img" style="display:none;"/>
+    <label class="btn btn-primary" for="img">Click to upload image</label>
+   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Article category</label>
     <select name="category" id="category">

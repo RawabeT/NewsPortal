@@ -50,7 +50,6 @@ class ArticleController extends Controller
             $response = cloudinary()->upload($request->file('file')->getRealPath())->getSecurePath();
         }
         else{
-            // $response = $request->get("https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg");
             $article-> save();
             return redirect()->route('articles');
         }
@@ -105,6 +104,14 @@ class ArticleController extends Controller
         $article ->description = $request->description;
         $article ->author_name = $request->author_name;
         $article ->category = $request ->category;
+        if ($request->file('file')) {
+            $response = cloudinary()->upload($request->file('file')->getRealPath())->getSecurePath();
+        }
+        else{
+            $article-> save();
+            return redirect()->route('articles');
+        }
+        $article ->image = $response;
         $article->save();
         return redirect()->route('articles');
     }
