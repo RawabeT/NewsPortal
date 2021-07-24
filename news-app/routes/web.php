@@ -5,6 +5,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\CommentController;
 use App\Models\Article;
+use App\Models\Comment;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 
@@ -32,4 +33,6 @@ Route::post('/upload', [ArticleController::class, 'storeUploads']);
 
 require __DIR__.'/auth.php';
 
-Route::post('/comment' , [CommentController::class, 'store']);
+Route::post('/comment/{id}' , [CommentController::class, 'store']);
+Route::get('/comments' , [CommentController::class, 'show'])->name('comments');
+Route::post('/comment/edit/{id}' , [CommentController::class, 'approved']);

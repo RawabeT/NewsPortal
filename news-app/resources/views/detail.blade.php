@@ -77,28 +77,30 @@
 
                <!-- commentlist -->
                <ol class="commentlist">
-
+				   @foreach($comments as $comment)
+				   @if($comment->approved == true)
                   <li class="depth-1">
 
                      <div class="comment-content">
 
 	                     <div class="comment-info">
-	                        <cite>Itachi Uchiha</cite>
+	                        <cite>{{$comment->username}}</cite>
 
 	                        <div class="comment-meta">
-	                           <time class="comment-time" datetime="2014-07-12T23:05">Jul 12, 2014 @ 23:05</time>
-	                           <span class="sep">/</span><a class="reply" href="#">Reply</a>
+	                           <time class="comment-time" datetime="2014-07-12T23:05">{{$comment->created_at}}</time>
+	                           <!-- <span class="sep">/</span><a class="reply" href="#">Reply</a> -->
 	                        </div>
 	                     </div>
 
 	                     <div class="comment-text">
-	                        <p>Adhuc quaerendum est ne, vis ut harum tantas noluisse, id suas iisque mei. Nec te inani ponderum vulputate,
-	                        facilisi  has et. Iudico dictas scriptorem an vim, ei alia mentitum est, ne has voluptua praesent.</p>
+							 <p>{{$comment->comment}}</p>
 	                     </div>
 
 	                  </div>
 
                   </li>
+				  @endif
+				  @endforeach
                </ol> 				
 
                <!-- respond -->
@@ -106,7 +108,7 @@
 
                	<h3>Leave a Comment</h3>
 
-                  <form name="contactForm" id="contactForm" method="post" action="/comment">
+                  <form name="contactForm" id="contactForm" enctype="multipart/form-data" method="post" action="/comment/<?php echo $articles[0]->id; ?>">
 				  
   					   <fieldset>
 						 @csrf

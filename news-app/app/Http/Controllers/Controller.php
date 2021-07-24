@@ -33,7 +33,8 @@ class Controller extends BaseController
 
     public function details($id){
         $article = DB::select('select * from articles where id = ?',[$id]);
-        return view('detail',['articles'=>$article]);
+        $comment = DB::select('select * from comments where article_id = ?',[$id]);
+        return view('detail',['articles'=>$article],['comments'=>$comment]);
     }
 
     public function contact(Request $request){
