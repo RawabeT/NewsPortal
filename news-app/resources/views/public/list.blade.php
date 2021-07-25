@@ -15,7 +15,7 @@
     {{ csrf_field() }}
     <div class="input-group">
         <input type="text" class="form-control" name="s"
-            placeholder="Search by article title or description">
+            placeholder="Search by article title or description or author name">
             <button type="submit" class="btn btn-default">Search
             </button>
       
@@ -56,6 +56,11 @@
                         <a href="#">{{$article->category}}</a>             				
                     </span>			
                 </div>
+                <div class="entry-meta">
+                    <span class="cat-links">
+                        <a href="#">{{$article->author_name}}</a>             				
+                    </span>			
+                </div>
 
                 <h1 class="entry-title"><a href="/details/{{$article->id}}">{{$article->title}}</a></h1>
                 
@@ -63,6 +68,7 @@
                  <div class="entry-excerpt">
                  {{$article->description}}
                  </div>
+
         </div>
 
          </article> <!-- end article -->

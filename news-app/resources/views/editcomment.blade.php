@@ -9,7 +9,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                    
-<form method="POST" action="/articles/edit/<?php echo $comments[0]->id; ?>" enctype="multipart/form-data">
+<form method="POST" action="/comments/edit/<?php echo $comments[0]->id; ?>" enctype="multipart/form-data">
     @csrf
   <div class="form-group">
     <label for="exampleInputEmail1">user name</label>
@@ -24,15 +24,12 @@
     <input type="text" class="form-control" name="comment" placeholder="Enter author" value="{{$comments[0]->comment}}">
 </div>
 <div class="checkbox">
-    @if ($comment->approved)
-         <label><input type="checkbox" name="check_this" value="selected" checked>Yes.</label>
+    @if ($comments[0]->approved)
+         <label><input type="checkbox" name="approved" value="{{$comments[0]->approved}}" checked></label>
     @else
-         <label><input type="checkbox" name="check_this" value="selected">Yes.</label>
+         <label><input type="checkbox" name="approved" value="selected"></label>
    @endif
 </div>
-         <div class="col-md-6">
-                            <button type="submit" class="btn btn-success">Approve</button>
-                        </div>
 
   </div>
   <button type="submit" class="btn btn-primary">Edit</button>

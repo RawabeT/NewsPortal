@@ -20,6 +20,7 @@ class CreateCommentTable extends Migration
             $table->string('email');
             $table->longText('comment');
             $table->boolean('approved')->nullable();
+            $table->boolean('is_visible')->nullable();
             $table->unsignedBigInteger('article_id');
             $table->foreign('article_id')->references('id')->on('articles')->onUpdate('cascade')->onDelete('cascade');
         });

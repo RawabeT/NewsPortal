@@ -18,6 +18,9 @@
       <th scope="col">Comment</th>
       <th scope="col"> Approved</th>
       <th scope="col"> Article Title</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
     </tr>
   </thead>
   <tbody>
@@ -42,7 +45,24 @@
                     </div>
                 </form>
     </td>
+    <td>
+      <form action="/comment/visible/<?php echo $comments[0]->id; ?>" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="checkbox">
+    @if ($comment->is_visible)
+         <label><input type="checkbox" name="is_visible" value="{{$comment->is_visible}}" checked></label>
+    @else
+         <label><input type="checkbox" name="is_visible" value="selected"></label>
+   @endif
+   <button type="submit" class="btn btn-success">Confirm</button>
+</div>
+
+                    </div>
+                </form>
+    </td>
     <td>{{$comment->article_id}}</td>
+    <td><a href = 'comments/edit/{{ $comment->id }}'>Edit</a></td>
+      <td><a href = 'comment/delete/{{ $comment->id }}'>Delete</a></td>
     </tr>
     @endforeach
   </tbody>

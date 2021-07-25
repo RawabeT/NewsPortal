@@ -78,7 +78,7 @@
                <!-- commentlist -->
                <ol class="commentlist">
 				   @foreach($comments as $comment)
-				   @if($comment->approved == true)
+				   @if($comment->approved == true && $comment->is_visible == true)
                   <li class="depth-1">
 
                      <div class="comment-content">

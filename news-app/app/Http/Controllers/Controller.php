@@ -24,7 +24,7 @@ class Controller extends BaseController
 
     public function search(Request $request){
         $s = trim($request->get('s'));
-        $article = Article::where('title','LIKE','%'.$s.'%')->orWhere('description','LIKE','%'.$s.'%')->get();
+        $article = Article::where('title','LIKE','%'.$s.'%')->orWhere('description','LIKE','%'.$s.'%')->orWhere('author_name','LIKE','%'.$s.'%')->get();
         if(count($article) > 0)
             return view('public.list')->withDetails($article)->withQuery ( $s );
         else return view ('public.list')->withMessage('No Details found. Try to search again !');

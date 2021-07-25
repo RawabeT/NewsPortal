@@ -25,7 +25,7 @@ Route::get('/' , [ArticleController::class, 'home']);
 Route::get('/dashboard', [ArticleController::class, 'handleChart'])->middleware(['auth'])->name('dashboard');
 Route::resource('articles', ArticleController::class);
 Route::get('/articles' , [ArticleController::class, 'index'])->name('articles');
-Route::get('/articles/create' , [ArticleController::class, 'create'])->name('articles.create');
+Route::get('/articles/create' , [ArticleController::class, 'create'])->middleware(['auth'])->name('articles.create');
 Route::get('/articles/edit/{id}' , [ArticleController::class, 'edit']);
 Route::post('/articles/edit/{id}' , [ArticleController::class, 'update']);
 Route::get('/articles/delete/{id}' , [ArticleController::class, 'destroy']);
@@ -36,3 +36,8 @@ require __DIR__.'/auth.php';
 Route::post('/comment/{id}' , [CommentController::class, 'store']);
 Route::get('/comments' , [CommentController::class, 'show'])->name('comments');
 Route::post('/comment/edit/{id}' , [CommentController::class, 'approved']);
+Route::post('/comment/visible/{id}' , [CommentController::class, 'visibility']);
+Route::get('/comment/delete/{id}' , [CommentController::class, 'destroy']);
+Route::get('/comments/edit/{id}' , [CommentController::class, 'edit']);
+Route::post('/comments/edit/{id}' , [CommentController::class, 'updateComment']);
+
