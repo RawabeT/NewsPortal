@@ -19,6 +19,7 @@
       <th scope="col">Image </th>
       <th scope="col">Video </th>
       <th scope="col">Category </th>
+      <th scope="col">Number of visitors </th>
       <th scope="col"> </th>
       <th scope="col"> </th>
     </tr>
@@ -41,6 +42,7 @@
     </td>
       <td><img src="{{$article->video}}" width="50px"/></td>
       <td>{{$article->category}}</td>
+      <td>{{$article->view_count}}</td>
       <td><a href = 'articles/edit/{{ $article->id }}'>Edit</a></td>
       <td><a href = 'articles/delete/{{ $article->id }}'>Delete</a></td>
     </tr>

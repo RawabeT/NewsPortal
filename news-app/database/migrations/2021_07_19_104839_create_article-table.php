@@ -23,6 +23,7 @@ class CreateArticleTable extends Migration
             $table->string('video')->nullable() ; 
             $table->text('category')->nullable();
             $table->unsignedBigInteger('user_id');
+            $table->integer('view_count')->default(0);
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }

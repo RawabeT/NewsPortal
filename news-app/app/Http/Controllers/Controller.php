@@ -7,6 +7,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Models\Contact;
@@ -32,7 +33,14 @@ class Controller extends BaseController
     }
 
     public function details($id){
+
         $article = DB::select('select * from articles where id = ?',[$id]);
+        $post = Article::find($id);
+        $viewed = Session::get('view_count', []);
+        if(!in_array($post, $viewed)){
+            $post->increment('view_count');
+            Session::push('view_count', $post);
+        }
         $comment = DB::select('select * from comments where article_id = ?',[$id]);
         return view('public.detail',['articles'=>$article],['comments'=>$comment]);
     }
@@ -46,4 +54,5 @@ class Controller extends BaseController
         $contact->save();
         return redirect()->route('contacts');
     }
+
 }
