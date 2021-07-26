@@ -14,11 +14,12 @@
 	   <form action="/allarticles" method="get" role="search">
     {{ csrf_field() }}
     <div class="input-group">
-        <input type="text" class="form-control" name="s"
+        <input type="text" class="form-control" name="s" style="margin-bottom: auto;"
             placeholder="Search by article title or description or author name">
             <button type="submit" class="btn btn-default">Search
             </button>
-      
+            <button class="btn btn-default"><a href="/allarticlesA">Advanced Search</a>
+            </button>
     </div>
    </form>	
    	</div>

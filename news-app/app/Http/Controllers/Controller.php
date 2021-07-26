@@ -36,11 +36,19 @@ class Controller extends BaseController
         $s = trim($request->get('s'));
         $from = trim($request->get('from'));
         $to = trim($request->get('to'));
-        
+        $category = $request->get('categories');
+
         $query = Article::where('title','LIKE','%'.$s.'%');
         if($request->from != null) $query->where("date_of_publish", ">=", $request->from);
         if($request->to != null) $query->where("date_of_publish", "<=", $request->to . ' 23:59:59');
-        
+        if($category != null){ 
+            
+            $query->where(function ($query) use($category){
+                for ($i=0; $i < count($category); $i++) { 
+                    $query->orwhere('category', 'LIKE','%'.$category[$i].'%' );
+                }
+            });
+        }
 
         $article = $query->get();
         if(count($article) > 0)

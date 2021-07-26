@@ -4,7 +4,7 @@
 <section id="page-header">
    	<div class="row current-cat">
    		<div class="col-full">
-   			<h1>Advanced search</h1>
+   			<h1>Advanced Search</h1>
    		</div>   		
    	</div>
 
@@ -17,9 +17,40 @@
     <div class="input-group">
         <input type="text" class="form-control" name="s"
             placeholder="Search by article title or description or author name">
-            <input type="text" name="from" placeholder="from">
-            <input type="text" name="to" placeholder="to">
-      
+            <input type="date" name="from" placeholder="from">
+            <input type="date" name="to" placeholder="to">
+<!--             
+            <input class="ml-2" type="checkbox" name="categories[]" value="Arts">Arts
+            <input class="ml-2" type="checkbox" name="categories[]" value="Desgin">Desgin -->
+
+            <div >
+                <h3>Categories </h3>
+            <label class="checkbox-container">Arts
+  <input type="checkbox" name="categories[]" value="Art">
+  <span class="checkmark"></span>
+</label>
+<label class="checkbox-container">Desgin
+  <input type="checkbox" name="categories[]" value="Desgin">
+  <span class="checkmark"></span>
+</label>
+<label class="checkbox-container">Computer
+  <input type="checkbox" name="categories[]" value="Computer">
+  <span class="checkmark"></span>
+</label>
+<label class="checkbox-container">Games
+  <input type="checkbox" name="categories[]" value="Games">
+  <span class="checkmark"></span>
+</label>
+<label class="checkbox-container">Digitl
+  <input type="checkbox" name="categories[]" value="Digitl">
+  <span class="checkmark"></span>
+</label>
+<label class="checkbox-container">Study
+  <input type="checkbox" name="categories[]" value="Study">
+  <span class="checkmark"></span>
+</label>
+            </div>
+
     </div>
     <button type="submit" class="btn btn-default">Search</button>
    </form>	
