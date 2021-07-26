@@ -67,7 +67,7 @@
                 
             </div>
                  <div class="entry-excerpt">
-                 {{$article->description}}
+                 {{substr($article->description,0,100)}} Read more...
                  </div>
 
         </div>

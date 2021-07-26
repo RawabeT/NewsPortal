@@ -2848,7 +2848,7 @@ footer ul li {
 	line-height: 1.571;
 	font-family: "montserrat-bold", sans-serif;
 	border: none;
-	color: var(--dark);
+	color: var(--white);
 }
 
 .blog-single .pagenav a span {

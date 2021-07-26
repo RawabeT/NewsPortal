@@ -48,21 +48,20 @@
 
 					</div> <!-- end entry-primary -->		  			   
 
-	  			   <!-- <div class="pagenav group">
+					@if($articles[0]->id > 0)
+	  			   <div class="pagenav group">
 		  			   <div class="prev-nav">
-		  			   	<a href="#" rel="prev">
+		  			   	<a href="/details/{{$articles[0]->id-1}}" rel="prev">
 		  			   		<span>Previous</span>
-		  			   		Tips on Minimalist Design 
 		  			   	</a>
 		  			   </div>
 		  				<div class="next-nav">
-		  					<a href="#" rel="next">
+		  					<a href="/details/{{$articles[0]->id+1}}" rel="next">
 		  						<span>Next</span>
-		  			   		Less Is More 
 		  					</a>
 		  				</div>  				   
-	  				</div> -->
-
+	  				</div>
+					  @endif
 				</article>
    		
 
@@ -88,7 +87,6 @@
 
 	                        <div class="comment-meta">
 	                           <time class="comment-time" datetime="2014-07-12T23:05">{{$comment->created_at}}</time>
-	                           <!-- <span class="sep">/</span><a class="reply" href="#">Reply</a> -->
 	                        </div>
 	                     </div>
 

@@ -37,7 +37,7 @@
       @if(!is_null($article->image)) 
       <img src="{{$article->image}}" width="50px"/>
       @else
-      <img src="images/thumbs/lighthouse.jpg" width="50px"/>
+      <img src="images/cartoon.jpeg" width="50px"/>
       @endif
     </td>
       <td><img src="{{$article->video}}" width="50px"/></td>
