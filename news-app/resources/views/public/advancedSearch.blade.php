@@ -19,10 +19,9 @@
             placeholder="Search by article title or description or author name">
             <input type="text" name="from" placeholder="from">
             <input type="text" name="to" placeholder="to">
-            <button type="submit" class="btn btn-default">Search
-            </button>
       
     </div>
+    <button type="submit" class="btn btn-default">Search</button>
    </form>	
    	</div>
 
