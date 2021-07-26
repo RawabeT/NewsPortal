@@ -17,10 +17,11 @@
       <th scope="col">Email</th>
       <th scope="col">Comment</th>
       <th scope="col"> Approved</th>
+      <th scope="col"> Visibility</th>
       <th scope="col"> Article Title</th>
       <th scope="col"> </th>
       <th scope="col"> </th>
-      <th scope="col"> </th>
+      
     </tr>
   </thead>
   <tbody>
@@ -31,7 +32,7 @@
       <td>{{$comment->email}}</td>
       <td>{{$comment->comment}}</td>
       <td>
-      <form action="/comment/edit/<?php echo $comments[0]->id; ?>" method="POST" enctype="multipart/form-data">
+      <form action="/comment/edit/<?php echo $comment->id; ?>" method="POST" >
                     @csrf
                     <div class="checkbox">
     @if ($comment->approved)
@@ -46,15 +47,19 @@
                 </form>
     </td>
     <td>
-      <form action="/comment/visible/<?php echo $comments[0]->id; ?>" method="POST" enctype="multipart/form-data">
+      <form action="/comment/visible/<?php echo $comment->id; ?>" method="POST" >
                     @csrf
                     <div class="checkbox">
     @if ($comment->is_visible)
-         <label><input type="checkbox" name="is_visible" value="{{$comment->is_visible}}" checked></label>
+         <!-- <label><input type="checkbox" name="is_visible" value="{{$comment->is_visible}}" checked></label> -->
+         <input type="hidden" name="is_visible" value="0" >
+         <button type="submit" class="btn btn-success">Hide</button>
+
     @else
-         <label><input type="checkbox" name="is_visible" value="selected"></label>
+         <input type="hidden" name="is_visible" value="1" >
+         <button type="submit" class="btn btn-success">Show</button>
    @endif
-   <button type="submit" class="btn btn-success">Confirm</button>
+   <!-- <button type="submit" class="btn btn-success">Confirm</button> -->
 </div>
 
                     </div>

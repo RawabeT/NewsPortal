@@ -30,6 +30,13 @@
          <label><input type="checkbox" name="approved" value="selected"></label>
    @endif
 </div>
+<div class="checkbox">
+    @if ($comments[0]->is_visible)
+         <label><input type="checkbox" name="is_visible" value="{{$comments[0]->is_visible}}" checked></label>
+    @else
+         <label><input type="checkbox" name="is_visible" value="selected"></label>
+   @endif
+</div>
 
   </div>
   <button type="submit" class="btn btn-primary">Edit</button>

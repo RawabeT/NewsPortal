@@ -32,6 +32,23 @@ class Controller extends BaseController
 
     }
 
+    public function advancedSearch(Request $request){
+        $s = trim($request->get('s'));
+        $from = trim($request->get('from'));
+        $to = trim($request->get('to'));
+        
+        $query = Article::where('title','LIKE','%'.$s.'%');
+        if($request->from != null) $query->where("date_of_publish", ">=", $request->from);
+        if($request->to != null) $query->where("date_of_publish", "<=", $request->to . ' 23:59:59');
+        
+
+        $article = $query->get();
+        if(count($article) > 0)
+            return view('public.advancedSearch')->withDetails($article)->withQuery ( [$from ,$to]);
+        else return view ('public.advancedSearch')->withMessage('No Details found. Try to search again !');
+
+    }
+
     public function details($id){
 
         $article = DB::select('select * from articles where id = ?',[$id]);

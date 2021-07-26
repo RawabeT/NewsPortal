@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 
 
 Route::any('/allarticles', [Controller::class, 'search'])->name('allarticles');
+Route::any('/allarticlesA', [Controller::class, 'advancedSearch'])->name('allarticlesA');
 Route::get('/details/{id}', [Controller::class,'details']);
 Route::post('/contact' , [Controller::class, 'contact']);
 

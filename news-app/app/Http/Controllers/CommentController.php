@@ -42,14 +42,15 @@ class CommentController extends Controller
         $comment = Comment::find($id);
         $comment->approved = $request-> approved ? true : false;
         $comment->save();
-        return $this->show();
+        return redirect()->route('comments');
     }
 
     public function visibility(Request $request, $id){
         $comment = Comment::find($id);
-        $comment->is_visible = $request-> is_visible ? true : false;
+        // DB::update('update comments set is_visible = 1 where id = ?',[$id]);
+        $comment->is_visible = (int) $request-> is_visible ? true : false;
         $comment->save();
-        return $this->show();
+        return redirect()->route('comments');
     }
 
     public function destroy($id)
@@ -66,6 +67,7 @@ class CommentController extends Controller
 
     public function updateComment(Request $request, $id)
     {
+       
         $comment = Comment::find($id);
         $comment ->username = $request->username;
         $comment ->email = $request->email;

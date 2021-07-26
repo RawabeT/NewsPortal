@@ -23,9 +23,9 @@ shown if the admin approves it.✅
 - Users shall have an advance search page with following filters (date
 range filter, Muti-selector for category filter, and search field that
 searches in (title, content and author))
-- Admin shall Edit a comment.
-- Admin shall show/hide a comment.
-- Admin shall delete a comment.
+- Admin shall Edit a comment.✅
+- Admin shall show/hide a comment.✅
+- Admin shall delete a comment.✅
 - Admin shall have a chart for total hidden and shown comments in the
 main dashboard
-- Admin shall have number of visitors for each news.
+- Admin shall have number of visitors for each news.✅

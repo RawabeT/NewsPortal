@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -69,21 +70,18 @@ class ArticleController extends Controller
         //             ->pluck('count');
 
         //number of articles of each category            
-        $art = Article::where('category','Art')->get();
-    	$design = Article::where('category','Design')->get();
-    	$digitl = Article::where('category','Digitl')->get();
-        $computer = Article::where('category','Computer')->get();
-    	$games = Article::where('category','Games')->get();
-    	$study = Article::where('category','Study')->get();
-    	$art_c = count($art);    	
-    	$design_c = count($design);
-    	$digitl_c = count($digitl);
-        $computer_C = count($computer);    	
-    	$games_c = count($games);
-    	$study_c = count($study);
+        $art = Article::where('category','Art')->get()->count();
+    	$design = Article::where('category','Design')->get()->count();
+    	$digitl = Article::where('category','Digitl')->get()->count();
+        $computer = Article::where('category','Computer')->get()->count();
+    	$games = Article::where('category','Games')->get()->count();
+    	$study = Article::where('category','Study')->get()->count();
+
+        $hidden = Comment::where('is_visible', false)->get()->count();
+        $shown = Comment::where('is_visible', true)->get()->count();
 
         $articleCount = DB::table('articles')->count();
-        return view('dashboard', compact('art_c','design_c','digitl_c','computer_C','games_c','study_c', 'articleCount'));
+        return view('dashboard', compact('hidden','shown','art','design','digitl','computer','games','study', 'articleCount'));
     }
 
     public function show($id)
