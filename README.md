@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Ahmed-Almutairi/Twitter">
-    <img src="images/logo.png" alt="Logo" width="300" height="100">
+    <img src="https://user-images.githubusercontent.com/82483633/127213445-31b1e96b-3a25-4bb0-9630-56f7dfb28a27.png" alt="Logo" width="300" height="100">
   </a>
   <h3 align="center">BBC News project </h3>
 </p>
@@ -51,7 +51,7 @@ A News web app/ dashboard  created using PHP larvel Framework , breaking news , 
 - Comments page to show and manage comments with pagination 
 - Accept or reject comments from admin
 
-!["NEWS Project"]()
+!["NEWS Project"](https://user-images.githubusercontent.com/82483633/127213445-31b1e96b-3a25-4bb0-9630-56f7dfb28a27.png)
 
 ### Built With
 #### Front-End  
