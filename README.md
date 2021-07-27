@@ -1,31 +1,79 @@
-# NewsPortal
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/Ahmed-Almutairi/Twitter">
+    <img src="images/logo.png" alt="Logo" width="300" height="100">
+  </a>
+  <h3 align="center">BBC News project </h3>
+</p>
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+<p >
+A News web app/ dashboard  created using PHP larvel Framework , breaking news , arts, design and more. The BBC informs educates and entertains wherever you are, whatever your age. 
+    <br />
+    </a>
+    <br />
+    <br />
+    <a href="http://e098455207a0.ngrok.io">View Demo </a>
+  </p>
 
 
-## Main Requirements:
+## Public features:
+- Home page to display last 10 news
+- All News page to show all news with both normal and advance search
+- About us page
+- Contact us page with working contact form
+- Single page for each article with users comments  
 
-- Admin login page ✅
-- Admin shall Add news. ✅
-- News contain the following (title, category, author name, content (can
-have video and images) and date of publish) ✅
-- Admin shall Edit news. ✅
-- Admin shall Delete news. ✅
-- Admin have main dashboard that have charts to display total news,
-number of news per category. ✅
-- All news shall be displayed on the public news landing page as following
-(last 10 news in main page and all remaining in another page with search
-feature) ✅
-- public news landing page shall have about us and contact us pages ✅
+## Dashboard features:
+- Home page with Charts for display:
+   - Total News
+   - Number of news per category
+   - Total hidden and shown comments
+   - Number of visitors
 
-## Additional Requirements: 
+- Articles page to display all articles with pagination and manage it
+- Create page to create an article 
+- Comments page to show and manage comments with pagination 
+- Accept or reject comments from admin
 
-- Users can add a comment to any news but the comment will only be
-shown if the admin approves it.✅
-- Users shall have an advance search page with following filters (date
-range filter, Muti-selector for category filter, and search field that
-searches in (title, content and author)) ✅
-- Admin shall Edit a comment.✅
-- Admin shall show/hide a comment.✅
-- Admin shall delete a comment.✅
-- Admin shall have a chart for total hidden and shown comments in the
-main dashboard ✅
-- Admin shall have number of visitors for each news.✅
+!["NEWS Project"]()
+
+### Built With
+#### Front-End  
+ - HTML
+ - CSS
+ - JavaScripte
+ - JQuary
+ - Tailwind
+ - Bootstrap 
+ - charts.js
+
+#### Back-End 
+ - Laraval php 
+ #### Packeges
+ - Breeze
+ - Cloudinary
+#### Database
+ - MySQL
+
+ #### Deploy using
+ Valet
+
+## Contact
+
+- [Rawabe Ebrahim](https://www.linkedin.com/in/rawabe-ebrahim-68775716b/) -  rawabe44u@gmail.com
