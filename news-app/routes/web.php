@@ -25,11 +25,11 @@ Route::get('/contact', function () {
 Route::get('/' , [ArticleController::class, 'home']);
 Route::get('/dashboard', [ArticleController::class, 'handleChart'])->middleware(['auth'])->name('dashboard');
 Route::resource('articles', ArticleController::class);
-Route::get('/articles' , [ArticleController::class, 'index'])->name('articles');
+Route::get('/articles' , [ArticleController::class, 'index'])->middleware(['auth'])->name('articles');
 Route::get('/articles/create' , [ArticleController::class, 'create'])->middleware(['auth'])->name('articles.create');
-Route::get('/articles/edit/{id}' , [ArticleController::class, 'edit']);
+Route::get('/articles/edit/{id}' , [ArticleController::class, 'edit'])->middleware(['auth']);
 Route::post('/articles/edit/{id}' , [ArticleController::class, 'update']);
-Route::get('/articles/delete/{id}' , [ArticleController::class, 'destroy']);
+Route::get('/articles/delete/{id}' , [ArticleController::class, 'destroy'])->middleware(['auth']);
 Route::post('/upload', [ArticleController::class, 'storeUploads']);
 
 require __DIR__.'/auth.php';

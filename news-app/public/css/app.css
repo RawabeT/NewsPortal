@@ -27,6 +27,25 @@ html {
      tab-size: 4;
 }
 
+
+input, textarea, select{
+  background: #f5f5f5 !important;
+  border: 0 !important;
+  color: #121212 !important;
+}
+
+.btn-primary{
+  background: #bb86fc !important;
+  border: none !important;
+}
+a .bi-x-lg{
+  color: red !important;
+}
+
+a .bi-pencil{
+  color: #333 !important;
+}
+
 /**
 1. Correct the line height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -35,6 +54,10 @@ html {
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+.nav-custom{
+  color:red !important;
 }
 
 /*
@@ -13411,7 +13434,7 @@ select {
 
 .border-indigo-400 {
   --tw-border-opacity: 1;
-  border-color: rgba(129, 140, 248, var(--tw-border-opacity));
+  border-color: #bb86fc;;
 }
 
 .border-indigo-500 {

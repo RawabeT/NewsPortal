@@ -33,7 +33,7 @@ class CommentController extends Controller
 
     public function show(){
         return view('comment', [
-            'comments' => DB::table('comments')-> paginate(5)
+            'comments' => DB::table('comments')-> paginate(5),
         ]);
     }
 
@@ -47,8 +47,7 @@ class CommentController extends Controller
 
     public function visibility(Request $request, $id){
         $comment = Comment::find($id);
-        // DB::update('update comments set is_visible = 1 where id = ?',[$id]);
-        $comment->is_visible = (int) $request-> is_visible ? true : false;
+        $comment->is_visible = $request-> is_visible ? true : false;
         $comment->save();
         return redirect()->route('comments');
     }
@@ -67,7 +66,6 @@ class CommentController extends Controller
 
     public function updateComment(Request $request, $id)
     {
-       
         $comment = Comment::find($id);
         $comment ->username = $request->username;
         $comment ->email = $request->email;

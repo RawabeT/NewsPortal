@@ -23,11 +23,11 @@
 
                                 <div class="post-content">
                                     <ul class="entry-meta">
-                                         <li>September 06, 2016</li> 
-                                         <li><a href="#" >Naruto Uzumaki</a></li>				
+                                         <li>September 06, 2021</li> 
+                                         <li><a href="#" ></a></li>				
                                      </ul>	
 
-                                    <h1 class="slide-title"><a href="#" title="">Minimalism Never Goes Out of Style</a></h1> 
+                                    <h1 class="slide-title"><a href="#" title="">BBC World Service television, radio and online on more than 40 languages</a></h1> 
                                 </div> 				   					  
                         
                             </div>
@@ -42,11 +42,11 @@
 
                                 <div class="post-content">
                                     <ul class="entry-meta">
-                                         <li>August 29, 2016</li>
-                                         <li><a href="#">Sasuke Uchiha</a></li>					
+                                         <li>August 29, 2020</li>
+                                         <li><a href="#"></a></li>					
                                      </ul>	
 
-                                    <h1 class="slide-title"><a href="#" title="">Enhancing Your Designs with Negative Space</a></h1>
+                                    <h1 class="slide-title"><a href="#" title="">Our commercial operations generate income to invest in new programmes and content</a></h1>
                                 </div>		   				   					  
                         
                             </div>
@@ -61,11 +61,11 @@
 
                                 <div class="post-content">
                                     <ul class="entry-meta">
-                                         <li>August 27, 2016</li>
-                                         <li><a href="#" class="author">Naruto Uzumaki</a></li>					
+                                         <li>August 27, 2020</li>
+                                         <li><a href="#" class="author"></a></li>					
                                      </ul>	
 
-                                    <h1 class="slide-title"><a href="#" title="">Music Album Cover Designs for Inspiration</a></h1>
+                                    <h1 class="slide-title"><a href="#" title="">The Executive Committee is responsible for the day-to-day management of the BBC</a></h1>
                                 </div>
 
                             </div>
