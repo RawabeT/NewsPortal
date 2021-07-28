@@ -67,7 +67,7 @@ A News web app/ dashboard  created using PHP larvel Framework , breaking news , 
  - Laraval php 
  #### Packeges
  - Breeze
- - Cloudinary
+ - Cloudinary (Image API service)
 #### Database
  - MySQL
 
