@@ -13,6 +13,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#features">Project features</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
