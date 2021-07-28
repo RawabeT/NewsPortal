@@ -50,7 +50,7 @@ A News web app/ dashboard  created using PHP larvel Framework , breaking news , 
 - Comments page to show and manage comments with pagination 
 - Accept or reject comments from admin
 
-!["NEWS Project"](https://user-images.githubusercontent.com/82483633/127213445-31b1e96b-3a25-4bb0-9630-56f7dfb28a27.png)
+!["NEWS Project"](https://user-images.githubusercontent.com/82483633/127248374-43904f3e-538e-43c7-a44c-499322343902.gif)
 
 ### Built With
 #### Front-End  
