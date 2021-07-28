@@ -33,14 +33,14 @@ A News web app/ dashboard  created using PHP larvel Framework , breaking news , 
   </p>
 
 ### Features
-## Public features:
+### Public Website:
 - Home page to display last 10 news
 - All News page to show all news with both normal and advance search
 - About us page
 - Contact us page with working contact form
 - Single page for each article with users comments  
 
-## Dashboard features:
+### Dashboard:
 - Home page with Charts for display:
    - Total News
    - Number of news per category
