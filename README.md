@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Ahmed-Almutairi/Twitter">
-    <img src="images/logo.png" alt="Logo" width="300" height="100">
+    <img src="https://user-images.githubusercontent.com/82483633/127213445-31b1e96b-3a25-4bb0-9630-56f7dfb28a27.png" alt="Logo" width="300" height="100">
   </a>
   <h3 align="center">BBC News project </h3>
 </p>
@@ -13,6 +13,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#features">Project features</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -26,20 +27,18 @@
 A News web app/ dashboard  created using PHP larvel Framework , breaking news , arts, design and more. The BBC informs educates and entertains wherever you are, whatever your age. 
     <br />
     </a>
-    <br />
-    <br />
-    <a href="http://e098455207a0.ngrok.io">View Demo </a>
+    <a href="http://5e0e1fd89793.ngrok.io/">View Demo </a>
   </p>
 
-
-## Public features:
+### Features
+### Public Website:
 - Home page to display last 10 news
 - All News page to show all news with both normal and advance search
 - About us page
 - Contact us page with working contact form
 - Single page for each article with users comments  
 
-## Dashboard features:
+### Dashboard:
 - Home page with Charts for display:
    - Total News
    - Number of news per category
@@ -51,7 +50,7 @@ A News web app/ dashboard  created using PHP larvel Framework , breaking news , 
 - Comments page to show and manage comments with pagination 
 - Accept or reject comments from admin
 
-!["NEWS Project"]()
+!["NEWS Project"](https://user-images.githubusercontent.com/82483633/127248374-43904f3e-538e-43c7-a44c-499322343902.gif)
 
 ### Built With
 #### Front-End  
@@ -67,7 +66,7 @@ A News web app/ dashboard  created using PHP larvel Framework , breaking news , 
  - Laraval php 
  #### Packeges
  - Breeze
- - Cloudinary
+ - Cloudinary (Image API service)
 #### Database
  - MySQL
 
