@@ -12,6 +12,7 @@
 	--dark: #121212;
 	--gray: #212121;
 	--white: #f5f5f5;
+	--inputText: #212121;
   }
 
 html {
@@ -538,7 +539,7 @@ select {
 	border: 0;
 	outline: none;
 	vertical-align: middle;
-	color: var(--white);
+	color: var(--inputText);
 	font-family: "roboto-regular", sans-serif;
 	font-size: 1.5rem;
 	line-height: 3rem;
@@ -616,7 +617,7 @@ input[type="password"]:focus,
 textarea:focus,
 select:focus {
 	background: var(--white);
-	color: white;
+	color: var(--inputText);
 }
 
 label,

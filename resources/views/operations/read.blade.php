@@ -29,7 +29,7 @@
               <tr>
                 <th scope="row">{{$article->id}}</th>
                 <td>{{$article->title}}</td>
-                <td>{{$article->description}}</td>
+                <td>{{substr($article->description,0,100)}}</td>
                 <td>{{$article->author_name}}</td>
                 <td>{{$article->date_of_publish}}</td>
 

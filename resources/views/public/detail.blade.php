@@ -48,20 +48,7 @@
 
 					</div> <!-- end entry-primary -->		  			   
 
-					@if($articles[0]->id > 0)
-	  			   <div class="pagenav group">
-		  			   <div class="prev-nav">
-		  			   	<a href="/details/{{$articles[0]->id-1}}" rel="prev">
-		  			   		<span>Previous</span>
-		  			   	</a>
-		  			   </div>
-		  				<div class="next-nav">
-		  					<a href="/details/{{$articles[0]->id+1}}" rel="next">
-		  						<span>Next</span>
-		  					</a>
-		  				</div>  				   
-	  				</div>
-					  @endif
+					  
 				</article>
    		
 

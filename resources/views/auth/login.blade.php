@@ -15,6 +15,7 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
+            <h1 class="text-center mb-5">This page is only for admin</h1>
             <!-- Email Address -->
             <div>
                 <x-label for="email" :value="__('Email')" />
@@ -31,14 +32,6 @@
                                 name="password"
                                 required autocomplete="current-password" />
             </div>
-
-            <!-- Remember Me -->
-            <!-- <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div> -->
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))

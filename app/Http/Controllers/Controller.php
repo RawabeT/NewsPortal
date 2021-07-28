@@ -38,7 +38,7 @@ class Controller extends BaseController
         $to = trim($request->get('to'));
         $category = $request->get('categories');
 
-        $query = Article::where('title','LIKE','%'.$s.'%');
+        $query = Article::where('title','LIKE','%'.$s.'%')->orWhere('description','LIKE','%'.$s.'%')->orWhere('author_name','LIKE','%'.$s.'%');
         if($request->from != null) $query->where("date_of_publish", ">=", $request->from);
         if($request->to != null) $query->where("date_of_publish", "<=", $request->to . ' 23:59:59');
         if($category != null){ 
