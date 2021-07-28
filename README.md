@@ -32,7 +32,7 @@ A News web app/ dashboard  created using PHP larvel Framework , breaking news , 
     <a href="http://5e0e1fd89793.ngrok.io/">View Demo </a>
   </p>
 
-
+### Features
 ## Public features:
 - Home page to display last 10 news
 - All News page to show all news with both normal and advance search
