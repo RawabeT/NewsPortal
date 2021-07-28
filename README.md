@@ -28,7 +28,7 @@ A News web app/ dashboard  created using PHP larvel Framework , breaking news , 
     </a>
     <br />
     <br />
-    <a href="http://096043072f3e.ngrok.io">View Demo </a>
+    <a href="http://5e0e1fd89793.ngrok.io/">View Demo </a>
   </p>
 
 
