@@ -27,7 +27,7 @@
 A News web app/ dashboard  created using PHP larvel Framework , breaking news , arts, design and more. The BBC informs educates and entertains wherever you are, whatever your age. 
     <br />
     </a>
-    <a href="http://5e0e1fd89793.ngrok.io/">View Demo </a>
+    <a href="https://rawabenews.com/">View Demo </a>
   </p>
 
 ### Features
