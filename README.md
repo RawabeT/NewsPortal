@@ -71,7 +71,8 @@ A News web app/ dashboard  created using PHP larvel Framework , breaking news , 
  - MySQL
 
  #### Deploy using
- Valet
+ Valet and Nginx server
+ Hostinger shared web hosting and Apache HTTP server
 
 ## Contact
 
